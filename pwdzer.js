@@ -16,6 +16,22 @@ if (password.length >= 9) {
 
 // - It has upper case and lower case
 
+var upperCaseLetters = "QWERTYUIOPASDFGHJKLZXCVBNM";
+
+var foundSome = false;
+for (i = 0; i < password.length; i++) {
+	if (upperCaseLetters.includes(password[i])) {
+		foundSome = true;
+	}
+}
+
+if (foundSome) {
+	console.log("Found Uppercase letters.")
+} else {
+	console.log("No uppercase letters!!!!")
+	goodPassword = false;
+}
+
 // - it has special symbols
 // - it has numbers
 // - not common words (i.e. NOT "password")
